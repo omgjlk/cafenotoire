@@ -1,4 +1,4 @@
-# cafenotoir
+# cafenotoire
 A coffee review webapp
 
 This app exists as an exercise in building a Rails app. I do not intend to
