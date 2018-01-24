@@ -6,3 +6,5 @@ market this application, I just want to learn how to build a Rails app using
 a subject I have some interest in.
 
 Pull requests are open, but this is mostly for me to learn.
+
+For more info, see [The Wiki](../../wiki)
