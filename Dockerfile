@@ -12,6 +12,8 @@ RUN apk add --virtual foo ruby-dev build-base sqlite-dev && \
 
 COPY . ./
 
+RUN rails db:migrate
+
 EXPOSE 3000
 
 CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
