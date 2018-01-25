@@ -1,0 +1,27 @@
+<%= form_with(model: roaster, local: true) do |form| %>
+  <% if roaster.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(roaster.errors.count, "error") %> prohibited this roaster from being saved:</h2>
+
+      <ul>
+      <% roaster.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :roaster_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :roaster_location %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

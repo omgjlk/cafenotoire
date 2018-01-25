@@ -1,0 +1,27 @@
+<%= form_with(model: reviewer, local: true) do |form| %>
+  <% if reviewer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reviewer.errors.count, "error") %> prohibited this reviewer from being saved:</h2>
+
+      <ul>
+      <% reviewer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :reviewer_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :reviewer_location %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

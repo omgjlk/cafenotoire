@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rating: 1.5
+  notes: MyText
+  roast: one
+  serving: one
+  reviewer: one
+
+two:
+  rating: 1.5
+  notes: MyText
+  roast: two
+  serving: two
+  reviewer: two

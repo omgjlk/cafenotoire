@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Roasters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roasters.each do |roaster| %>
+      <tr>
+        <td><%= roaster.name %></td>
+        <td><%= roaster.location %></td>
+        <td><%= link_to 'Show', roaster %></td>
+        <td><%= link_to 'Edit', edit_roaster_path(roaster) %></td>
+        <td><%= link_to 'Destroy', roaster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Roaster', new_roaster_path %>
